@@ -69,14 +69,16 @@ public class main {
                     break;
                 case 6:
                     long startTime6 = System.currentTimeMillis(); // Inicio del contador de tiempo
-                    int x=arreglo.BusquedaBinaria(arregloordenado, 85);
+                    System.out.println("Ingrese un numero para buscar");
+                    int num = scanner.nextInt();
+                    int x=arreglo.BusquedaBinaria(arregloordenado, num);
                     if (x!=-1)
-                        System.out.println("El numero se encontro");{
-                        
+                    {
+                        System.out.println("El numero se encontro en la posicion " + x);
+                    }else{
+                         System.out.println("No se encontro el numero buscado"); 
                     }
                     long endTime6 = System.currentTimeMillis(); // Fin del contador de tiempo
-                    //Mostramos el arreglo ordenado
-                    arreglo.muestra();
                     System.out.println("\nTiempo de ejecucion: " + (endTime6 - startTime6) + " milisegundos");
                     break;
                 case 7:
